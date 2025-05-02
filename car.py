@@ -17,7 +17,6 @@ import os
 
 
 def mainProgramme():
-    prixFlotte = {}
     # inITIALISATION DES VARIABLES
     ## liste de voitures
     carFloat = []
@@ -31,10 +30,13 @@ def mainProgramme():
         print("Erreur : Veuillez entrer un nombre valide pour le nombre de voitures.")
         nbCars = 0
     for i in range(nbCars):
+        prixFlotte = {}
         print(f"Voiture {i+1} :")
         promptCarInfos(prixFlotte)
         print(prixFlotte)
         carFloat.append(prixFlotte)
+        # carFloat.append(prixFlotte.copy())
+        # prixFlotte.clear()
     print(carFloat)
 
     # Sauvegarder les voitures dans un fichier
