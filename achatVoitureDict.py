@@ -81,7 +81,7 @@ def promptCarInfos(prixFlotte):
 ## généraliser à une saise de 10 voitures
 
 
-def mainProgramme(carFloat, tva, prixTTC, promptCarInfos):
+def mainProgramme(carFloat, tva, prixTTC, promptCarInfos,):
     prixFlotte = {}
     nbCars = input("Combien de voitures voulez-vous ajouter ?")
 
