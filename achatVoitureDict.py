@@ -81,20 +81,23 @@ def promptCarInfos(prixFlotte):
 ## généraliser à une saise de 10 voitures
 
 
-prixFlotte = {}
-nbCars = input("Combien de voitures voulez-vous ajouter ?")
+def mainProgramme(carFloat, tva, prixTTC, promptCarInfos):
+    prixFlotte = {}
+    nbCars = input("Combien de voitures voulez-vous ajouter ?")
 
-if nbCars.isdigit():
-    nbCars = int(nbCars)
-else:   
-    print("Erreur : Veuillez entrer un nombre valide pour le nombre de voitures.")
-    nbCars = 0
+    if nbCars.isdigit():
+        nbCars = int(nbCars)
+    else:   
+        print("Erreur : Veuillez entrer un nombre valide pour le nombre de voitures.")
+        nbCars = 0
 
 
-for i in range(nbCars):
-    print(f"Voiture {i+1} :")
-    promptCarInfos(prixFlotte)
-    print(prixFlotte)
-    print("Prix TTC : {0}".format(prixTTC(prixFlotte["price"], tva)))
-    carFloat.append(prixFlotte)
+    for i in range(nbCars):
+        print(f"Voiture {i+1} :")
+        promptCarInfos(prixFlotte)
+        print(prixFlotte)
+        print("Prix TTC : {0}".format(prixTTC(prixFlotte["price"], tva)))
+        carFloat.append(prixFlotte)
+
+mainProgramme(carFloat, tva, prixTTC, promptCarInfos)
 
